@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #ec5b13;
+  --color-primary-light: #fbbf24;
+  --color-background-dark: #0a0a0a;
+  --color-background-light: #f8f6f6;
+  --font-display: "Public Sans", sans-serif;
+}
+
+/* ── Base ──────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  background: #0a0a0a;
+  color: #f1f5f9;
+}
+
+::selection {
+  background: rgba(236, 91, 19, 0.3);
+}
+
+/* ── Glassmorphism Card ────────────── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 20px 25px -5px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05),
+    0 25px 50px -12px rgba(0, 0, 0, 0.4),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* ── Orange Glow Background ───────── */
+.orange-glow {
+  background: radial-gradient(
+    circle at center,
+    rgba(236, 91, 19, 0.35) 0%,
+    rgba(251, 191, 36, 0.15) 40%,
+    rgba(236, 91, 19, 0) 75%
+  );
+}
+
+/* ── Text Gradient ─────────────────── */
+.text-gradient {
+  background: linear-gradient(to right, #ffffff, #fbbf24, #ec5b13);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Tilt 3D Hover Effect ──────────── */
+.tilt-effect {
+  transition: transform 0.5s cubic-bezier(0.2, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.tilt-effect:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateY(-5px);
+}
+
+/* ── Card Accent Glow (on hover) ──── */
+.card-accent-glow {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(
+    circle at center,
+    rgba(236, 91, 19, 0.2) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+  pointer-events: none;
+}
+.group:hover .card-accent-glow {
+  opacity: 1;
+}
+
+/* ── Progress Bar Animation ────────── */
+.progress-bar-fill {
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Hamburger Menu ────────────────── */
+.mobile-menu-enter {
+  animation: slideDown 0.3s ease-out;
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
