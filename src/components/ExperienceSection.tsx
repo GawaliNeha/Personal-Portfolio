@@ -22,12 +22,13 @@ export default function ExperienceSection() {
         {/* Experience Timeline */}
         <div>
           <motion.h2
-            className="text-3xl font-bold mb-12 flex items-center gap-4"
+            className="text-3xl font-bold mb-12 flex items-center gap-4 text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
+            <span className="h-px flex-1 bg-white/5" />
             Experience
             <span className="h-px flex-1 bg-white/5" />
           </motion.h2>
