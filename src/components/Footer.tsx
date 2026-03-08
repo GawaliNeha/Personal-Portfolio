@@ -1,7 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { siteData } from "@/data/portfolio";
+import SocialIcon from "./SocialIcon";
 
 export default function Footer() {
   const { footer, socialLinks } = siteData;
@@ -42,14 +44,23 @@ export default function Footer() {
               <a
                 key={link.platform}
                 href={link.url}
-                className="glass-card w-[56px] h-[56px] rounded-xl flex items-center justify-center hover:bg-white/10 transition-colors border border-white/10 tilt-effect"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card w-[56px] h-[56px] rounded-xl flex items-center justify-center hover:bg-white/10 transition-colors border border-white/10 tilt-effect group"
                 style={{
                   boxShadow:
                     "0 30px 60px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.1)",
                 }}
                 aria-label={link.platform}
               >
-                <span className="material-symbols-outlined text-xl">{link.icon}</span>
+                {link.platform === "LinkedIn" || link.platform === "GitHub" ? (
+                  <SocialIcon
+                    platform={link.platform}
+                    className="w-6 h-6 opacity-70 group-hover:opacity-100 transition-opacity"
+                  />
+                ) : (
+                  <span className="material-symbols-outlined text-xl">{link.icon}</span>
+                )}
               </a>
             ))}
           </div>

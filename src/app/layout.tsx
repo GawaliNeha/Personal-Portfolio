@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Neha Nitin Gawali — UX/UI Designer Portfolio",
+  title: "Neha Nitin Gawali — Technical Solutions Engineer @ HPE",
   description:
-    "Portfolio of Neha Nitin Gawali, a Senior Product Designer specializing in sophisticated UX/UI solutions that bridge the gap between human needs and business goals.",
-  keywords: ["UX Designer", "UI Designer", "Product Designer", "Portfolio", "Neha Nitin Gawali"],
+    "Portfolio of Neha Nitin Gawali, a Technical Solutions Engineer at HPE specializing in Storage, Linux, Kubernetes, and Cloud Infrastructure.",
+  keywords: ["Technical Solutions Engineer", "HPE", "Storage", "Linux", "Kubernetes", "Docker", "Portfolio", "Neha Nitin Gawali"],
 };
 
 export default function RootLayout({

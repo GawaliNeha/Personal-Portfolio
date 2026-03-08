@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "www.vectorlogo.zone",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.simpleicons.org",
+      },
     ],
   },
 };

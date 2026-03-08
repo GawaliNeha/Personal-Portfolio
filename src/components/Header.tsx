@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { siteData } from "@/data/portfolio";
 
 export default function Header() {
@@ -10,11 +11,8 @@ export default function Header() {
   return (
     <header className="flex items-center justify-between py-8 border-b border-white/5">
       {/* Logo */}
-      <div className="flex items-center gap-3">
-        <div className="w-10 h-10 bg-[#ec5b13] rounded-xl flex items-center justify-center text-white shadow-lg shadow-[#ec5b13]/20">
-          <span className="material-symbols-outlined">diamond</span>
-        </div>
-        <span className="text-xl font-bold tracking-tight">{personal.name}</span>
+      <div className="flex items-center">
+        <span className="text-2xl md:text-3xl font-bold tracking-tighter">{personal.name}</span>
       </div>
 
       {/* Desktop Nav */}
@@ -43,19 +41,16 @@ export default function Header() {
         aria-label="Toggle menu"
       >
         <span
-          className={`block w-6 h-0.5 bg-white transition-transform ${
-            mobileOpen ? "rotate-45 translate-y-2" : ""
-          }`}
+          className={`block w-6 h-0.5 bg-white transition-transform ${mobileOpen ? "rotate-45 translate-y-2" : ""
+            }`}
         />
         <span
-          className={`block w-6 h-0.5 bg-white transition-opacity ${
-            mobileOpen ? "opacity-0" : ""
-          }`}
+          className={`block w-6 h-0.5 bg-white transition-opacity ${mobileOpen ? "opacity-0" : ""
+            }`}
         />
         <span
-          className={`block w-6 h-0.5 bg-white transition-transform ${
-            mobileOpen ? "-rotate-45 -translate-y-2" : ""
-          }`}
+          className={`block w-6 h-0.5 bg-white transition-transform ${mobileOpen ? "-rotate-45 -translate-y-2" : ""
+            }`}
         />
       </button>
 

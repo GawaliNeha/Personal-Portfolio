@@ -42,27 +42,41 @@ export default function PublicationsSection() {
         {publications.map((pub) => (
           <motion.div
             key={pub.title}
-            className="glass-card p-8 rounded-3xl group tilt-effect relative overflow-hidden"
             variants={cardVariants}
+            className="h-full"
           >
-            <div className="card-accent-glow" />
-            <div className="flex justify-between items-start mb-6">
-              <div className="w-12 h-12 bg-[#ec5b13]/10 rounded-xl flex items-center justify-center text-[#ec5b13]">
-                <span className="material-symbols-outlined">{pub.icon}</span>
+            <a
+              href={pub.link}
+              target={pub.link ? "_blank" : undefined}
+              rel={pub.link ? "noopener noreferrer" : undefined}
+              className={`glass-card p-8 rounded-3xl group tilt-effect relative overflow-hidden h-full flex flex-col ${
+                pub.link ? "cursor-pointer" : "pointer-events-none"
+              }`}
+            >
+              <div className="card-accent-glow" />
+              <div className="flex justify-between items-start mb-6">
+                <div className="w-12 h-12 bg-[#ec5b13]/10 rounded-xl flex items-center justify-center text-[#ec5b13]">
+                  <span className="material-symbols-outlined">{pub.icon}</span>
+                </div>
+                <span
+                  className={`font-bold text-xs uppercase tracking-widest ${
+                    pub.isCurrent ? "text-[#ec5b13]" : "text-slate-500"
+                  }`}
+                >
+                  {pub.year}
+                </span>
               </div>
-              <span
-                className={`font-bold text-xs uppercase tracking-widest ${
-                  pub.isCurrent ? "text-[#ec5b13]" : "text-slate-500"
-                }`}
-              >
-                {pub.year}
-              </span>
-            </div>
-            <h3 className="text-xl font-bold mb-3 group-hover:text-[#ec5b13] transition-colors">
-              {pub.title}
-            </h3>
-            <p className="text-slate-400 text-sm font-medium mb-4 italic">{pub.journal}</p>
-            <p className="text-slate-500 text-sm leading-relaxed">{pub.description}</p>
+              <h3 className="text-xl font-bold mb-3 group-hover:text-[#ec5b13] transition-colors flex items-center gap-2">
+                {pub.title}
+                {pub.link && (
+                  <span className="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                    open_in_new
+                  </span>
+                )}
+              </h3>
+              <p className="text-slate-400 text-sm font-medium mb-4 italic">{pub.journal}</p>
+              <p className="text-slate-500 text-sm leading-relaxed">{pub.description}</p>
+            </a>
           </motion.div>
         ))}
       </motion.div>

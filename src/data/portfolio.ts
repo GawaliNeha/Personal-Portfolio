@@ -1,7 +1,3 @@
-// ============================================================
-// PORTFOLIO DATA — Edit this file to update your website!
-// No coding knowledge needed. Just change the text values.
-// ============================================================
 
 export const siteData = {
   // ──────────────────────────────────────────────
@@ -20,7 +16,7 @@ export const siteData = {
     availableBadge: "Available for Projects",
     heroImage: "/me2.jpg",
     heroImageAlt: "Neha Nitin Gawali - Technical Solutions Engineer",
-    resumeUrl: "#",
+    resumeUrl: "/Neha_gawali_resume.pdf",
     email: "nehaagawali5@gmail.com",
   },
 
@@ -29,9 +25,8 @@ export const siteData = {
   // ──────────────────────────────────────────────
   socialLinks: [
     { platform: "Email", url: "mailto:nehaagawali5@gmail.com", icon: "alternate_email" },
-    { platform: "LinkedIn", url: "https://www.linkedin.com/in/neha-gawali-0a8a06205", icon: "share" },
-    { platform: "GitHub", url: "https://github.com/GawaliNeha", icon: "code" },
-    { platform: "Website", url: "#", icon: "public" },
+    { platform: "LinkedIn", url: "https://www.linkedin.com/in/neha-gawali-0a8a06205", icon: "LinkedIn" },
+    { platform: "GitHub", url: "https://github.com/GawaliNeha", icon: "GitHub" },
   ],
 
   // ──────────────────────────────────────────────
@@ -123,7 +118,7 @@ export const siteData = {
       image:
         "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2000&auto=format&fit=crop",
       imageAlt: "Financial tracking software dashboard",
-      link: "https://github.com/Nehagavali11/CodeClause_FeeReport",
+      link: "https://github.com/GawaliNeha/CodeClause_FeeReport",
     },
   ],
 
@@ -174,6 +169,7 @@ export const siteData = {
       description:
         "A research paper exploring the use of AI/ML technologies for recognizing crimes in the untraceable environments of the dark web.",
       isCurrent: true,
+      link: "https://www.igi-global.com/gateway/chapter/307874",
     },
     {
       icon: "eco",
@@ -183,6 +179,7 @@ export const siteData = {
       description:
         "Optimizing Mahogany tree growth conditions using satellite technology and real-time data insights for sustainable agroforestry.",
       isCurrent: false,
+      link: "https://ijsrem.com/download/tree-plantation-management-in-agriculture-sector/",
     },
   ],
 

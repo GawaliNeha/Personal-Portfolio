@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { siteData } from "@/data/portfolio";
+import SocialIcon from "./SocialIcon";
 
 export default function HeroSection() {
   const { personal, socialLinks } = siteData;
@@ -48,6 +49,9 @@ export default function HeroSection() {
           </a>
           <a
             href={personal.resumeUrl}
+            download="Neha_Nitin_Gawali_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="glass-card px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition-colors flex items-center gap-2 border border-white/10"
           >
             Download CV{" "}
@@ -61,10 +65,16 @@ export default function HeroSection() {
             <a
               key={link.platform}
               href={link.url}
-              className="hover:text-[#ec5b13] transition-colors"
+              className="hover:text-[#ec5b13] transition-colors flex items-center justify-center"
               aria-label={link.platform}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <span className="material-symbols-outlined">{link.icon}</span>
+              {link.platform === "LinkedIn" || link.platform === "GitHub" ? (
+                <SocialIcon platform={link.platform} className="w-5 h-5 opacity-70 hover:opacity-100 transition-opacity" />
+              ) : (
+                <span className="material-symbols-outlined">{link.icon}</span>
+              )}
             </a>
           ))}
         </div>
