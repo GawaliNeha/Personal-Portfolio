@@ -14,7 +14,7 @@ export const siteData = {
     description:
       "Emerging technology professional with hands-on experience in Linux, Kubernetes, and Docker. Currently part of the HPE Storage team, contributing to cutting-edge enterprise solutions and storage infrastructure.",
     availableBadge: "Available for Projects",
-    heroImage: "/me2.jpg",
+    heroImage: "/5c9ff922-a4fb-405a-b011-a4d1644e9bc8.jpg",
     heroImageAlt: "Neha Nitin Gawali - Technical Solutions Engineer",
     resumeUrl: "/Neha_gawali_resume.pdf",
     email: "nehaagawali5@gmail.com",
